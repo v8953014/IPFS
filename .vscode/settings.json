@@ -1,11 +1,30 @@
 {
-    "editor.tabSize": 2,
-    "typescript.format.semicolons": "remove",
-    "javascript.format.semicolons": "remove",
-    "typescript.suggest.includeAutomaticOptionalChainCompletions": true,
-    "editor.formatOnSave": true,
-    "eslint.codeActionsOnSave.rules": [],
-    "files.exclude": {
-        "package-lock.json": true
-    }
+  "[css][scss][html][javascript][typescript][json][jsonc][markdown][yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.fixAll.eslint": true,
+    "source.organizeImports": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.rulers": [140],
+  "eslint.options": {
+    "extensions": [".ts", ".html"]
+  },
+  "eslint.packageManager": "pnpm",
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact", "html"],
+  "files.associations": {
+    ".ipfs-npmrc": "json"
+  },
+  "html.format.indentHandlebars": true,
+  "html.format.maxPreserveNewLines": 1,
+  "html.format.wrapAttributes": "auto",
+  "html.format.wrapLineLength": 140,
+  "npm.packageManager": "pnpm",
+  "tslint.packageManager": "pnpm",
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "typescript.updateImportsOnFileMove.enabled": "always"
 }

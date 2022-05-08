@@ -1,34 +1,14 @@
-# IPFS Public Gateway Checker
+# Public Gateway Cacher
 
-**A site displaying public IPFS gateways and their online/offline status.**
+[![pipeline status](https://gitlab.com/NatoBoram/public-gateway-cacher/badges/master/pipeline.svg)](https://gitlab.com/NatoBoram/public-gateway-cacher/-/commits/master)
+[![StackShare](https://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/NatoBoram/public-gateway-cacher)
 
-View the Public Gateway Checker on GitHub Pages: https://ipfs.github.io/public-gateway-checker/
+Cache a specific hash on a bunch of public gateways.
 
-[![Screenshot of Public Gateway Checker](https://user-images.githubusercontent.com/157609/121263486-f7fb2800-c8b5-11eb-9061-0b6f586a6f25.png)](https://ipfs.github.io/public-gateway-checker/)
+You can view this website on [GitLab Pages](https://natoboram.gitlab.io/public-gateway-cacher) and [IPFS](https://bafybeievsdzxuvuah5t6vzhig525jecp7wmupnm7olxdkonqmte57zoqf4.ipfs.dweb.link).
 
-## SECURITY NOTES
+![Screenshot](https://bafybeie7txrbzw6ipb62lplnpzsjpz7s4o5q7uufb5rjfelol2cuxeyzye.ipfs.dweb.link/Screenshot_2020-07-09%20Public%20Gateway%20Cacher.png)
 
--   The list contains gateways operated by various parties, coordinated by loose mutual consensus, without a central governing authority. Protocol Labs operates and is responsible for only two of the listed gateways: `ipfs.io` and `dweb.link`.
--   Gateways without origin isolation will be marked with ⚠️, indicating they are not safe for use cases that require private local storage of data or credentials. [Learn more](https://github.com/ipfs/public-gateway-checker/issues/150).
+**NOTE :** All of these (except `ipfs.io` and `dweb.link`) are hosted by third-parties and should be treated as such.
 
-## Adding a new public gateway
-
-If you'd like to add a new public gateway, please edit `./src/gateways.json`:
-
-1. Add the gateway's address to the bottom of the list
-2. Make sure the final item in the list does **not** have a comma at the end, but all preceding items do
-3. If you care about security of websites loaded via your gateway, make sure it is set up as a [subdomain gateway](https://docs.ipfs.io/how-to/address-ipfs-on-web/#subdomain-gateway). See [config docs](https://github.com/ipfs/go-ipfs/blob/master/docs/config.md#gatewaypublicgateways) and [recipes](https://github.com/ipfs/go-ipfs/blob/master/docs/config.md#gateway-recipes) for go-ipfs, and [learn more here](https://github.com/ipfs/public-gateway-checker/issues/150).
-
-Then, submit a pull request for this change. Be sure to follow all the directions in the pull request template so your PR can be triaged as quickly as possible.
-
-## Testing locally
-
-```bash
-npm ci
-npm run build
-npm start
-```
-
-## Command line
-
-Prefer to check public gateways from your terminal? A CLI version, `ipfg`, is available at https://github.com/JayBrown/Tools/tree/master/ipfg.
+If you'd like to add a new public gateway, please go to [github.com/ipfs/public-gateway-checker](https://github.com/ipfs/public-gateway-checker), submit a pull request then open an issue [here](https://gitlab.com/NatoBoram/public-gateway-cacher/issues/new).
